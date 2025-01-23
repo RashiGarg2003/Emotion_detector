@@ -13,7 +13,7 @@ def emotion_detector(text_to_analyze):
         
         # Adjust the keys based on the actual response structure
         emotion_predictions = formatted_response.get('emotionPredictions', [{}])[0].get('emotion', {})
-         anger = emotion_predictions.get('anger', 0)
+        anger = emotion_predictions.get('anger', 0)
         disgust = emotion_predictions.get('disgust', 0)
         fear = emotion_predictions.get('fear', 0)
         joy = emotion_predictions.get('joy', 0)
@@ -29,7 +29,7 @@ def emotion_detector(text_to_analyze):
         }
         
         dominant_emotion = max(emotions, key=emotions.get)
-         return {
+        return {
             'anger': anger,
             'disgust': disgust,
             'fear': fear,
